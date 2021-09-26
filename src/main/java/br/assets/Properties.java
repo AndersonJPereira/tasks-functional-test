@@ -15,6 +15,6 @@ public class Properties {
 	}
 	
 	public static Browsers BROWSER = Browsers.CHROME;
-	public static TipoExecucao TIPOEXECUCAO = TipoExecucao.LOCAL;
+	public static TipoExecucao TIPOEXECUCAO = TipoExecucao.GRID;
 	
 }

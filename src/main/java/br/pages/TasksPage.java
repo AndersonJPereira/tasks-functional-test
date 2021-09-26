@@ -9,7 +9,7 @@ import br.assets.BasePage;
 public class TasksPage extends BasePage {
 
 	public void acessarPagina() {
-		DriverFactory.getDriver().get("http://localhost:8001/tasks");
+		DriverFactory.getDriver().get("http://192.168.0.114:8001/tasks");
 	}
 	
 	public void clicarBotaoAdicionarTask() {
