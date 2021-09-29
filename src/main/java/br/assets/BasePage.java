@@ -150,8 +150,8 @@ public class BasePage {
 
 		boolean encontrou = false;
 		Select selecao = new Select (DriverFactory.getDriver().findElement(By.id(idElemento)));
-		for (WebElement iteração:selecao.getOptions()) {
-			if (iteração.getText().equals(texto)) {
+		for (WebElement iteracao:selecao.getOptions()) {
+			if (iteracao.getText().equals(texto)) {
 				encontrou = true;
 				break;
 			}
