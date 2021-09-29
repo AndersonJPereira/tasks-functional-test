@@ -53,9 +53,9 @@ public class DriverFactory {
 			}
 			
 			try {
-				driver = new RemoteWebDriver(new URL("http://192.168.1.102:4444/wd/hub"),cap);
+				driver = new RemoteWebDriver(new URL(Properties.LOCALHOST+":4444/wd/hub"),cap);
 			} catch (MalformedURLException e) {
-				System.err.println ("Falha na conexão com o GRID");
+				System.err.println ("Falha na conexï¿½o com o GRID");
 				e.printStackTrace();
 			}
 		}
@@ -76,7 +76,7 @@ public class DriverFactory {
 			try {
 				driver = new RemoteWebDriver(new URL("https://AndersonPereira:2d634f49-c8a4-409b-a1cb-cf20e5f1ea03@ondemand.us-west-1.saucelabs.com:443/wd/hub"),cap);
 			} catch (MalformedURLException e) {
-				System.err.println ("Falha na conexão com o CLOUD");
+				System.err.println ("Falha na conexï¿½o com o CLOUD");
 				e.printStackTrace();
 			}
 		}
