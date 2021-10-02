@@ -3,6 +3,8 @@ package br.pages;
 import br.assets.DriverFactory;
 import br.assets.Properties;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.sql.Driver;
 
 import br.assets.BasePage;
@@ -10,7 +12,7 @@ import br.assets.BasePage;
 public class TasksPage extends BasePage {
 
 	public void acessarPagina() {
-		DriverFactory.getDriver().get(Properties.LOCALHOST+":8001/tasks");
+		DriverFactory.getDriver().get("http://"+Properties.LOCALHOST+":8001/tasks");	
 	}
 	
 	public void clicarBotaoAdicionarTask() {

@@ -1,5 +1,7 @@
 package task.functionaltest;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -13,7 +15,7 @@ import br.pages.TasksPage;
 public class TasksFunctionalTest {
 	
 	private static TasksPage tasksPage;
-
+	
 	@Before
 	public void setup() {
 		tasksPage = new TasksPage();
