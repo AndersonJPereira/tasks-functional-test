@@ -24,6 +24,8 @@ public class TasksPage extends BasePage {
 	}
 	
 	public void clicarBotaoAdicionarTask() {
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 20);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("addTodo")));
 		clicarBotao("addTodo");
 	}
 	
