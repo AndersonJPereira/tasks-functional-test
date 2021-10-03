@@ -7,12 +7,20 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.sql.Driver;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import br.assets.BasePage;
 
 public class TasksPage extends BasePage {
 
 	public void acessarPagina() {
 		DriverFactory.getDriver().get("http://"+Properties.LOCALHOST+":8001/tasks");	
+	}
+	
+	public void acessarPaginaProd() {
+		DriverFactory.getDriver().get("http://"+Properties.LOCALHOST+":9999/tasks");	
 	}
 	
 	public void clicarBotaoAdicionarTask() {
@@ -33,6 +41,10 @@ public class TasksPage extends BasePage {
 	
 	public String obterStatusInsercaoTask() {
 		return obterTexto("message");
+	}
+	
+	public String obterVersaoBuild() {
+		return obterTexto("version");
 	}
 	
 	public void fecharPagina() {

@@ -1,7 +1,6 @@
 package task.functionaltest;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
