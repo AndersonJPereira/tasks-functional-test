@@ -18,7 +18,7 @@
 				<configuration>
 					<skipTests>${skip.surefire.tests}</skipTests>
 					<parallel>all</parallel>
-					<threadCount>3</threadCount>
+					<threadCount>2</threadCount>
 				</configuration>
 			</plugin>
 			<plugin>
