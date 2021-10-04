@@ -16,7 +16,7 @@ import br.assets.BasePage;
 public class TasksPage extends BasePage {
 
 	public void acessarPagina() {
-		DriverFactory.getDriver().get("http://"+Properties.LOCALHOST+":8001/tasks");	
+		DriverFactory.getDriver().get("http://"+Properties.LOCALHOST+":9554/tasks");	
 	}
 	
 	public void acessarPaginaProd() {
