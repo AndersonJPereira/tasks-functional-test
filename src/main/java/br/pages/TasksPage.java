@@ -32,7 +32,7 @@ public class TasksPage extends BasePage {
 	public void clicarBotaoRemoverTask(String task) {
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(),20);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='todoTable']//td[.="+task+"]/..//a[.='Remove']")));
-		clicarBotaoByXpath("//table[@id='todoTable']//td[.="+task+"]/..//a[.='Remove']");
+		clicarBotaoByXpath("//table[@id='todoTable']//td[.='"+task+"']/..//a[.='Remove']");
 	}
 	
 	public void preencherDescricaoTask(String Descricao) {
