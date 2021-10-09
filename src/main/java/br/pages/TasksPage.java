@@ -16,7 +16,7 @@ import br.assets.BasePage;
 public class TasksPage extends BasePage {
 
 	public void acessarPagina() {
-		DriverFactory.getDriver().get("http://"+Properties.LOCALHOST+":9555/tasks");	
+		DriverFactory.getDriver().get("http://"+Properties.LOCALHOST+":9555/tasks");
 	}
 	
 	public void acessarPaginaProd() {
@@ -24,9 +24,15 @@ public class TasksPage extends BasePage {
 	}
 	
 	public void clicarBotaoAdicionarTask() {
-		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 20);
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(),20);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("addTodo")));
 		clicarBotao("addTodo");
+	}
+	
+	public void clicarBotaoRemoverTask(String task) {
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(),20);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='todoTable']//td[.="+task+"]/..//a[.='Remove']")));
+		clicarBotaoByXpath("//table[@id='todoTable']//td[.="+task+"]/..//a[.='Remove']");
 	}
 	
 	public void preencherDescricaoTask(String Descricao) {

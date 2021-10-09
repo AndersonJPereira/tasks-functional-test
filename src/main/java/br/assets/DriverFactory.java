@@ -1,9 +1,7 @@
 package br.assets;
 
-import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.UnknownHostException;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -57,7 +55,7 @@ public class DriverFactory {
 			try {
 				driver = new RemoteWebDriver(new URL("http://"+Properties.LOCALHOST+":4444/wd/hub"),cap);
 			} catch (MalformedURLException e) {
-				System.err.println ("Falha na conex�o com o GRID");
+				System.err.println ("Falha na conexao com o GRID");
 				e.printStackTrace();
 			}
 		}

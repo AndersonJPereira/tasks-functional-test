@@ -62,6 +62,21 @@ public class TasksFunctionalTest {
 		tasksPage.clicarBotaoSalvarTask();
 		Assert.assertEquals("Fill the due date", tasksPage.obterStatusInsercaoTask());
 	}
+	
+	@Test
+	public void DeveRemoverTaskComSucesso() {
+		//pre-condicao
+		LocalDate data = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		tasksPage.clicarBotaoAdicionarTask();
+		tasksPage.preencherDescricaoTask("Estudar Pipeline");
+		tasksPage.preencherDataTask(data.format(formatter));
+		tasksPage.clicarBotaoSalvarTask();
+		Assert.assertEquals("Success!", tasksPage.obterStatusInsercaoTask());
+		
+		tasksPage.clicarBotaoRemoverTask("Estudo Pipeline");
+		Assert.assertEquals("Success!", tasksPage.obterStatusInsercaoTask());
+	}
 
 
 	@After
