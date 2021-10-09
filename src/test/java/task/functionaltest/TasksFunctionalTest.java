@@ -74,7 +74,7 @@ public class TasksFunctionalTest {
 		tasksPage.clicarBotaoSalvarTask();
 		Assert.assertEquals("Success!", tasksPage.obterStatusInsercaoTask());
 		
-		tasksPage.clicarBotaoRemoverTask("Estudo Pipeline");
+		tasksPage.clicarBotaoRemoverTask("Estudar Pipeline");
 		Assert.assertEquals("Success!", tasksPage.obterStatusInsercaoTask());
 	}
 
